@@ -3,7 +3,7 @@ project = BankLogo
 test: test-unit test-carthage test-cocoapods
 
 test-unit:
-	xcodebuild test -scheme $(project) -sdk iphonesimulator OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build | bundle exec xcpretty
+	xcodebuild test -scheme $(project) -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build | bundle exec xcpretty
 
 test-carthage:
 	echo 'test-carthage'
