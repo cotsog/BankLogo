@@ -10,7 +10,6 @@ test-archive:
 
 bootstrap:
 	bundle install
-	brew install carthage
 
 release:
 	zip -r -9 $(project).framework.zip Carthage/Build/iOS/*.framework
