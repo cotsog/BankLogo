@@ -3,7 +3,7 @@ project = BankLogo
 test: test-unit test-archive
 
 test-unit:
-	xcodebuild test -scheme $(project) -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build | bundle exec xcpretty
+	xcodebuild test -scheme $(project) -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | bundle exec xcpretty
 
 test-archive:
 	carthage build --no-skip-current
