@@ -5,7 +5,7 @@ install:
 # before_script:
 # - script/cert --import
 script:
-- xcodebuild test -scheme BankLogo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- make test-unit
 after_script:
 - script/cert --remove
 before_deploy:
