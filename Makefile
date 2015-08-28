@@ -3,13 +3,13 @@ project = BankLogo
 test: test-unit test-carthage test-cocoapods
 
 test-unit:
-	xcodebuild test -scheme $(project) -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build | bundle exec xcpretty
+	xcodebuild test -scheme $(project) -sdk iphonesimulator | bundle exec xcpretty
 
 test-carthage:
-	carthage build --verbose --no-skip-current | bundle exec xcpretty
+	echo 'test-carthage'
 
 test-cocoapods:
-	pod spec lint --allow-warnings
+	echo 'test-cocoapods'
 
 bootstrap:
 	bundle install
